@@ -1,0 +1,197 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+
+/* BACKGROUND PAGE */
+.bg-full {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #eef4ff, #ffffff);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-top: 130px;  /* CHUẨN ảnh 1 */
+  padding-bottom: 40px;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* LOGO + HEADER */
+
+.logo-box {
+  width: 88px;
+  height: 88px;
+  background: #1e66ff;
+  border-radius: 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto 20px auto;
+  box-shadow: 0px 14px 34px rgba(30, 102, 255, 0.28);
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #1f2430;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: #6f7683;
+  margin-bottom: 55px; /* chính xác spacing tới card */
+}
+
+
+/* FORM CARD */
+.card {
+  width: 480px;
+  background: white;
+  padding: 42px;
+  border-radius: 28px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.09);
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+
+/* LABEL */
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+  display: block;
+}
+
+
+/* INPUT FIELD */
+.input-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b0b7c3;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: 1px solid #dcdfe6;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.input:focus {
+  border-color: #1e66ff;
+  box-shadow: 0 0 0 3px rgba(30, 102, 255, 0.18);
+}
+
+
+/* OTP FIELD */
+.otp-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.otp-flex {
+  flex: 1;
+}
+
+.otp-box {
+  background: #e5e7eb;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+
+/* ERROR BOX */
+.error-box {
+  background: #ffe6e6;
+  border: 1px solid #f5b5b5;
+  color: #d62828;
+
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  margin-bottom: 12px;
+}
+
+
+/* LOGIN BUTTON */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #1e66ff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #1556d3;
+}
+
+
+/* DEMO BOX */
+.demo {
+  background: #f0f6ff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+
+/* FOOTER */
+.footer {
+  margin-top: 32px;
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+}
