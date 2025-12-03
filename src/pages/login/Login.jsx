@@ -44,24 +44,24 @@ export default function Login({ onLoginSuccess }) {
   };
 
   return (
-    <div className="bg-full">
+    <div className="login-page bg-full">
       
       <div className="login-header">
         <div className="logo-box">
           <FiLogIn size={38} color="#fff" />
         </div>
-        <h1 className="title">Hệ Thống Tổng Đài Đa Kênh</h1>
-        <p className="subtitle">KienlongBank Contact Center</p>
+        <h1 className="login-title">Hệ Thống Tổng Đài Đa Kênh</h1>
+        <p className="login-subtitle">KienlongBank Contact Center</p>
       </div>
 
-      <div className="card">
-        <h2 className="card-title">Đăng Nhập</h2>
+      <div className="login-card">
+        <h2 className="login-card-title">Đăng Nhập</h2>
 
         <form onSubmit={handleLogin} noValidate>
 
           {/* username */}
           <div className="field-wrap">
-            <label className="label">Tên đăng nhập</label>
+            <label className="login-label">Tên đăng nhập</label>
             <div className="input-wrap">
               {errorField === "username" && (
                 <div className="tooltip">Điền vào trường này</div>
@@ -72,7 +72,7 @@ export default function Login({ onLoginSuccess }) {
               </div>
 
               <input
-                className="input"
+                className="login-input"
                 placeholder="Nhập tên đăng nhập"
                 value={username}
                 onChange={(e) => {
@@ -85,7 +85,7 @@ export default function Login({ onLoginSuccess }) {
 
           {/* pass */}
           <div className="field-wrap">
-            <label className="label">Mật khẩu</label>
+            <label className="login-label">Mật khẩu</label>
             <div className="input-wrap">
               {errorField === "password" && (
                 <div className="tooltip">Điền vào trường này</div>
@@ -97,7 +97,7 @@ export default function Login({ onLoginSuccess }) {
 
               <input
                 type="password"
-                className="input"
+                className="login-input"
                 placeholder="Nhập mật khẩu"
                 value={password}
                 onChange={(e) => {
@@ -110,7 +110,7 @@ export default function Login({ onLoginSuccess }) {
 
           {/* otp */}
           <div className="field-wrap">
-            <label className="label">Mã xác thực</label>
+            <label className="login-label">Mã xác thực</label>
             <div className="otp-row">
               <div className="input-wrap otp-flex">
 
@@ -123,7 +123,7 @@ export default function Login({ onLoginSuccess }) {
                 </div>
 
                 <input
-                  className="input"
+                  className="login-input"
                   placeholder="Nhập mã xác thực"
                   value={otp}
                   onChange={(e) => {
@@ -140,7 +140,7 @@ export default function Login({ onLoginSuccess }) {
     
           {loginError && <div className="error-box">{loginError}</div>}
 
-          <button className="btn" type="submit" disabled={loading}>
+          <button className="login-btn" type="submit" disabled={loading}>
             <FiLogIn size={18} className="btn-icon" />
             {loading ? "Đang đăng nhập..." : "Đăng nhập"}
           </button>
@@ -154,7 +154,7 @@ export default function Login({ onLoginSuccess }) {
         </div>
       </div>
 
-      <p className="footer">© 2025 KienlongBank. All rights reserved.</p>
+      <p className="login-footer">© 2025 KienlongBank. All rights reserved.</p>
     </div>
   );
 }

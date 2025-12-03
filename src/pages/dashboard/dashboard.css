@@ -1,4 +1,4 @@
-.dashboard {
+.dashboard-page .dashboard {
   display: flex;
   font-family: "Inter", sans-serif;
   background: #f5f7fb;
@@ -6,12 +6,12 @@
   overflow: hidden;
 }
 
-.dashboard .header {
+.dashboard-page .dashboard .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 72px;
+  height: 68px;
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
   z-index: 100;
@@ -22,96 +22,134 @@
   justify-content: space-between;
 }
 
-.dashboard .header-left {
+.dashboard-page .dashboard .header-left {
   display: flex;
   align-items: center;
   gap: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.dashboard .logo-ic {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
+.dashboard-page .dashboard .header-divider {
+  width: 1px;
+  height: 70px;
+  background: #e8e6e6;     
+  margin: 76.6px;          
+  border-radius: 2px;
+}
+
+
+.dashboard-page .dashboard .logo-ic {
+  width: 31px;
+  height: 31px;
+  border-radius: 8px;
   background: #ff8000;
   color: #fff;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 12px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.dashboard .logo-text h3 {
+.dashboard-page .dashboard .logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1; 
+  gap: 8px;
+}
+
+.dashboard-page .dashboard .logo-text h3 {
   font-size: 16px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
+  color: #000000;
 }
 
-.dashboard .logo-text p {
-  font-size: 13px;
-  color: #6b7280;
+.dashboard-page .dashboard .logo-text p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
   margin: 0;
 }
 
-.dashboard .header-search {
+.dashboard-page .dashboard .logo-text a {
+  font-size: 13px;
+  color: #838080;
+  margin: 0;
+}
+
+.dashboard-page .dashboard .header-search {
   display: flex;
   align-items: center;
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   padding: 10px 14px;
-  width: 420px;
+  width: 590px;
   gap: 10px;
+  color: #b6b6b6;
+  margin-left: -60px;
+  
 }
 
-.dashboard .header-search input {
+.dashboard-page .dashboard .header-search input {
   border: none;
   outline: none;
   background: none;
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
 }
 
-.dashboard .header-right {
+.dashboard-page .dashboard .header-right {
   display: flex;
   align-items: center;
   gap: 28px;
 }
 
-.dashboard .notif {
+.dashboard-page .dashboard .notif {
   font-size: 18px;
   cursor: pointer;
+  color: #000000;
 }
 
-.dashboard .online {
+.dashboard-page .dashboard .online {
   font-size: 14px;
   color: #374151;
 }
 
-.dashboard .user {
+.dashboard-page .dashboard .user {
   display: flex;
+  border-left: 1px solid #cbcbce;
   align-items: center;
+  padding-left: 20px;  
+  margin-left: 12px; 
+  height: 35px;
   gap: 6px;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
+  color: #374151;
+  font-size: 15px;
 }
 
-.dashboard .logout {
+.dashboard-page .dashboard .logout {
   display: flex;
   align-items: center;
   gap: 6px;
   color: #dc2626;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 14px;
 }
 
-.dashboard .sidebar {
+.dashboard-page .dashboard .sidebar {
   position: fixed;
-  top: 72px; 
+  top: 68px; 
   left: 0;
 
-  width: 240px;
+  width: 260px;
   height: calc(100vh - 72px);
 
   background: #ffffff;
@@ -125,43 +163,46 @@
   overflow-y: auto;
 }
 
-.dashboard .menu {
+.dashboard-page .dashboard .menu {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.dashboard .menu li {
-  padding: 10px 14px;
-  font-size: 15px;
+.dashboard-page .dashboard .menu li {
+  padding: 12px 14px;
+  font-size: 14px;
   color: #4b5563;
-
   display: flex;
   align-items: center;
-  gap: 10px;
-
-  border-radius: 8px;
+  gap: 14px;
+  border-radius: 10px;
   cursor: pointer;
+  margin-top: -5px;
 }
 
-.dashboard .menu li:hover {
+.dashboard-page .dashboard .menu li svg {
+  font-size: 15px;
+}
+
+.dashboard-page .dashboard .menu li:hover {
   background: #eef2ff;
   color: #1d4ed8;
 }
 
-.dashboard .menu li.active {
+.dashboard-page .dashboard .menu li.active {
   background: #eef2ff;
   color: #1d4ed8;
   font-weight: 600;
 }
 
-.dashboard .user-box {
+.dashboard-page .dashboard .user-box {
   border-top: 1px solid #e5e7eb;
   padding-top: 18px;
   text-align: center;
 }
 
-.dashboard .avatar {
+.dashboard-page .dashboard .avatar {
   width: 45px;
   height: 45px;
   background: #4f46e5;
@@ -176,19 +217,19 @@
   font-weight: 600;
 }
 
-.dashboard .name {
+.dashboard-page .dashboard .name {
   margin: 0;
   font-size: 14px;
   font-weight: 600;
 }
 
-.dashboard .mail {
+.dashboard-page .dashboard .mail {
   margin: 0;
   font-size: 12px;
   color: #6b7280;
 }
 
-.dashboard .settings {
+.dashboard-page .dashboard .settings {
   width: 100%;
   margin-top: 10px;
   padding: 8px 0;
@@ -198,132 +239,324 @@
   cursor: pointer;
 }
 
-.dashboard .settings:hover {
+.dashboard-page .dashboard .settings:hover {
   background: #e5e7eb;
 }
 
-.dashboard .main-area {
-  margin-left: 240px; 
-  margin-top: 72px; 
+.dashboard-page .dashboard .main-area {
+  margin-left: 260px; 
+  margin-top: 68px; 
   padding: 28px;
   height: calc(100vh - 72px);
   overflow-y: auto;
+  background: #fafafa;
 }
 
-.dashboard .title {
-  font-size: 26px;
+.dashboard-page .dashboard .title {
+  font-size: 23px;
   font-weight: 700;
   margin-bottom: 4px;
+  color:#000000;
+  margin-top: -10px;
 }
 
-.dashboard .desc {
-  color: #6b7280;
+.dashboard-page .dashboard .desc {
+  color: #4b5563;
   margin-bottom: 28px;
 }
 
-.dashboard .kpi-top {
+.dashboard-page .dashboard .kpi-raw {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  margin-bottom: 32px;
+  gap: 70px;
+  margin: 20px 0 40px 0;
 }
 
-.dashboard .kpi-item {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
-
+.dashboard-page .dashboard .kpi-box {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.dashboard .kpi-item svg {
-  font-size: 32px;
+.dashboard-page .dashboard .kpi-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dashboard-page .dashboard .kpi-title {
+  margin: 0;
+  font-size: 15px;
+  color: #4b5563; 
+}
+
+.dashboard-page .dashboard .kpi-number {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+  color: #111827; 
+}
+
+.dashboard-page .dashboard .kpi-sub {
+  margin: 0;
+  font-size: 14px;
+  color: #059669; 
+  font-weight: 500;
+}
+
+.dashboard-page .dashboard .kpi-icon {
+  font-size: 24px;
+  margin-top: 8px;
+  margin-left: 40px;
+}
+
+.dashboard-page .dashboard .kpi-blue {
   color: #2563eb;
 }
 
-.dashboard .kpi-title {
-  font-size: 14px;
-  color: #6b7280;
+.dashboard-page .dashboard .kpi-green-icon {
+  color: #16a34a;
 }
 
-.dashboard .kpi-green {
-  font-size: 13px;
-  color: #059669;
+.dashboard-page .dashboard .kpi-orange {
+  color: #f97316; 
 }
 
-.dashboard .charts-row {
+.dashboard-page .dashboard .kpi-purple {
+  color: #a855f7; 
+}
+
+.dashboard-page .dashboard .charts-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 22px;
 }
 
-.dashboard .chart-card {
-  background: #ffffff;
-  padding: 22px;
-  border-radius: 16px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+.recharts-pie-label-text {
+  font-size: 18px !important;
+  font-weight: 600 !important;
 }
 
-.dashboard .chart-header {
+.recharts-pie-label-line {
+  stroke: transparent !important;
+}
+
+.recharts-pie-label-text[tspan][fill="#2ecc71"],
+.recharts-pie-label-text[tspan][fill="#27ae60"] {
+  fill: #22c55e !important;
+}
+
+.recharts-pie-label-text[tspan][fill="#f1c40f"] {
+  fill: #eab308 !important;
+}
+
+.recharts-pie-label-text[tspan][fill="#e74c3c"] {
+  fill: #ef4444 !important;
+}
+
+.recharts-pie-label-text[tspan][fill="#3498db"] {
+  fill: #3b82f6 !important;
+}
+
+.dashboard-page .dashboard .chart-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: -25px;
+  height: 400px;
+  width: 550px;
+  border: 1px solid #e4e6ea;
+}
+
+.dashboard-page .dashboard .chart-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
+  color:#000000;
+  margin-top: 5px;
+  font-size: 15px;
 }
 
-.dashboard .chart-header select {
+.dashboard-page .dashboard .chart-header select {
   border: 1px solid #d1d5db;
   border-radius: 8px;
   padding: 6px 10px;
 }
 
-.dashboard .kpi-small-row {
+.dashboard-page .dashboard .custom-select {
+  position: relative;
+  width: 150px;
+  font-family: inherit;
+}
+
+.dashboard-page .dashboard .select-btn {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color:#000000;
+}
+
+.dashboard-page .dashboard .arrow {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.dashboard-page .dashboard .select-menu {
+  position: absolute;
+  top: 42px;
+  right: 0;
+  width: 160px;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.dashboard-page .dashboard .select-item {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dashboard-page .dashboard .select-item:hover {
+  background: #f3f4f6;
+}
+
+.dashboard-page .dashboard .select-item.selected {
+  background: #e0e7ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.dashboard-page .dashboard .select-item.active {
+  background: #eef2ff;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+
+.dashboard-page .dashboard .kpi-small-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
   margin-top: 32px;
 }
 
-.dashboard .kpi-small {
+.dashboard-page .dashboard .kpi-small {
   background: #ffffff;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
 }
 
-.dashboard .kpi-small h2 {
+.dashboard-page .dashboard .kpi-small h2 {
   font-size: 32px;
   margin: 6px 0;
 }
 
-.dashboard .table-card {
+.dashboard-page .dashboard .kpi-summary-row {
+  display: flex;
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.dashboard-page .dashboard .kpi-summary-card {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 22px;
+  color:#000000;
+  font-weight:500;
+}
+
+.dashboard-page .dashboard .kpi-summary-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.dashboard-page .dashboard .icon-blue {
+  background: #eef4ff;
+  color: #3b82f6;
+}
+
+.dashboard-page .dashboard .icon-orange {
+  background: #fff3e5;
+  color: #fb923c;
+}
+
+.dashboard-page .dashboard .icon-green {
+  background: #e8fce9;
+  color: #22c55e;
+}
+
+.dashboard-page .dashboard .kpi-summary-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.dashboard-page .dashboard .kpi-summary-number {
+  font-size: 30px;
+  font-weight: 550;
+  margin: 4px 0 0 0;
+}
+
+.dashboard-page .dashboard .kpi-summary-sub {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.dashboard-page .dashboard .green {
+  color: #16a34a;
+}
+
+
+.dashboard-page .dashboard .table-card {
   margin-top: 32px;
   background: #ffffff;
   padding: 22px;
   border-radius: 16px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+  color: #000000;
 }
 
-.dashboard table {
+.dashboard-page .dashboard table {
   width: 100%;
   border-collapse: collapse;
+  color: #000000;
+  font-size: 14px;
 }
 
-.dashboard thead th {
+.dashboard-page .dashboard thead th {
   text-align: left;
   padding: 10px 5px;
-  color: #6b7280;
+  color: #000000;
 }
 
-.dashboard tbody td {
+.dashboard-page .dashboard tbody td {
   padding: 12px 5px;
   border-top: 1px solid #e5e7eb;
 }
 
-.dashboard .status-done {
+.dashboard-page .dashboard .status-done {
   color: #059669;
   font-weight: 600;
 }
